@@ -1,0 +1,3 @@
+# XDSectionHeaderCollectionView
+和tableview一样具有浮动的section header 效果的collectionView
+##先看一下效果图吧
