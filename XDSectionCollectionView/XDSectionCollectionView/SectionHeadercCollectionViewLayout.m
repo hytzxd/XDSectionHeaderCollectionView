@@ -28,11 +28,11 @@
     }
     
     
-    [missingSections enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:idx];
-        UICollectionViewLayoutAttributes *layoutAttributes = [self layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader atIndexPath:indexPath];
-        if (layoutAttributes != nil)  [attributes addObject:layoutAttributes];
-    }];
+//    [missingSections enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+//        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:idx];
+//        UICollectionViewLayoutAttributes *layoutAttributes = [self layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader atIndexPath:indexPath];
+//        if (layoutAttributes != nil)  [attributes addObject:layoutAttributes];
+//    }];
     
 //    NSPredicate *sectionPredicate = [NSPredicate predicateWithFormat:@"representedElementCategory == 0 and representedElementKind != 'UICollectionElementKindSectionHeader'"];
 //    NSArray *sections = [attributes  filteredArrayUsingPredicate:sectionPredicate];
@@ -69,7 +69,7 @@
             
             CGFloat headerHeight = CGRectGetHeight(layoutAttributes.frame);
             CGPoint origin = layoutAttributes.frame.origin;
-//             NSLog(@"%ld----%ld",(long)firstObjectIndexPath.section,(long)lastObjectIndexPath.section);
+
             origin.y =MIN(MAX(contentOffset.y + cv.contentInset.top,
                               (CGRectGetMinY(firstObjectAttrs.frame) -headerHeight)
                               ),
