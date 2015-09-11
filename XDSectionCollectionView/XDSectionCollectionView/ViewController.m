@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "SectionHeadercCollectionViewLayout.h"
+#import "XDDemoCollectionViewLayout.h"
 @interface ViewController ()
 <
 UICollectionViewDataSource,
@@ -38,7 +38,7 @@ static NSString * const sectionIndentifier = @"sectionHeaderIndentifier";
 - (void)makeView{
     if (self.collectionView)return;
     self.view.backgroundColor = [UIColor whiteColor];
-    UICollectionViewFlowLayout *layout  = [[SectionHeadercCollectionViewLayout alloc]init];
+    XDDemoCollectionViewLayout *layout  = [[XDDemoCollectionViewLayout alloc]init];
     layout.minimumInteritemSpacing = 10.f;
     layout.minimumLineSpacing = 10.f;
     CGFloat itemWidth = (([UIScreen mainScreen].bounds.size.width - 20) - 6 * 10) / 5.f;
